@@ -1,0 +1,148 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* html, body {
+  height:100%;
+}  */
+p{
+  padding: 0.75rem;
+}
+.primary-color{
+  color: rgb(202, 181, 88);
+}
+.center{
+  /* align-items: center; */
+  text-align: center;
+  padding: 12rem 0rem;
+  margin: 0.5rem;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  padding: 0.75rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+}
+ul li{
+  list-style: none; 
+  padding: 0rem 0.75rem;
+}
+
+/* navbar */
+#navbar{
+  display: flex;
+  padding: 0.50rem;
+  justify-content: space-between;
+}
+#navbar:hover{
+  background-color: #111;
+  color: rgb(202, 181, 88);
+}
+#navbar ul li a:hover{
+  color: rgb(202, 181, 88);
+  /* background-color: rgb(105, 89, 16); */
+}
+/* showcase */
+#showCase{
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url('../img/showcase.jpg') no-repeat center center/cover ;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  /* justify-content: center; */
+  
+}
+#showCaseContent h1{
+  font-size: 4rem;
+}
+#showCaseContent{
+  padding: 15rem 0rem;
+  color: #fff;
+}
+/* paragraph */
+#showCaseContent p{
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+}
+/* shop btn */
+#shopBtn{
+  background-color: rgb(202, 181, 88);
+  padding: 0.75;
+  border-radius: 10px;
+
+}
+/* small shop btn  */
+.shopBtnSml{
+  background-color: rgb(202, 181, 88);
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+/* shop section */
+
+#the2img{
+  display: flex;
+  color: #fff;
+  font-size: 2rem;
+}
+
+#img-1{
+  background-image: url(../img/img1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+#img-2{
+  background-image: url(../img/img2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+/* adjust the 3 images */
+.adj{
+  text-align: center;
+  margin: 0.2rem 0.5rem;
+}
+#the3img{
+  display: flex;
+  height: 50vh;
+  color: #fff;
+  font-size: 2rem;
+}
+#the3img h1{
+  padding-top: 4rem;
+}
+#img-3{
+  background: url(../img/img3.jpg) no-repeat center center/cover;
+  width: 33%;
+  padding: 1rem;
+}
+#img-4{
+  background: url(../img/img4.jpg) no-repeat center center/cover;
+  width: 33%;
+  padding: 1rem;
+}
+#img-5{
+  background: url(../img/img5.jpg) no-repeat center center/cover;
+  width: 33%;
+  padding: 1rem;
+}
+/* footer */
+#main-footer{
+  padding:0.5rem;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(93, 94, 32);
+}
+
+
