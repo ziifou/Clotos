@@ -142,7 +142,26 @@ ul li{
   padding:0.5rem;
   text-align: center;
   color: #fff;
-  background-color: rgb(93, 94, 32);
+  background-color: rgb(155, 156, 49);
 }
 
+/* who styling */
+#store-front{
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url(../img/store-front.jpg) no-repeat center center/cover;
+  height: 82vh;
+  color: #fff;
+  text-align: center;
+  border-bottom-right-radius: 200px;
+  padding: 10rem;
+  font-size: 1.4rem;
+}
+#store-front p{
+  padding-bottom: 20px;
+}
 
+#navbar.whonav{
+  background-color: #111;
+}
