@@ -9,6 +9,11 @@ const email1 = document.getElementById('email1');
 const msg = document.getElementById('message');
 const msglength = document.getElementById('msgLen');
 
+if(form)
+  populateUI([username, email, password, confirmPass]);
+if(contact)
+  populateUI([fullName, email1, msg]);
+
 //show error
 function showErr(input, message){
   const formControl = input.parentElement;
@@ -63,6 +68,24 @@ function checkPassMatch(input1, input2){
   }
 }
 
+//get data from local storage and populate UI
+function populateUI(arrinput){
+  arrinput.forEach(function(item){
+    const getItm = sessionStorage.getItem(item.id);
+    // console.log(getItm);
+    if(getItm){
+      item.value = getItm;
+    }
+  });
+}
+
+//save register data to local storage
+function saveData(inputarr){
+  inputarr.forEach(function(data){
+    sessionStorage.setItem(data.children[1].id, data.children[1].value);
+  });
+}
+
 //check input
 function checkRegInput(inputarr){
   checkUserLen(inputarr[0]);
@@ -72,11 +95,15 @@ function checkRegInput(inputarr){
 }
 //event Listener for register
 if(form){
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  checkRegInput([username, email, password, confirmPass]);
-});
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    checkRegInput([username, email, password, confirmPass]);
+    const rightData = document.querySelectorAll('.success');
+    saveData([...rightData]);
+    populateUI([username, email, password, confirmPass]);
+  });
 }
+
 function checkName(input){
   if(input.value.length < 2 || input.value.length > 30){
     showErr(input, 'Name muste be between 2 and 30');
@@ -99,9 +126,11 @@ function checkContInput(inputarr){
 }
 //event Listener for contact
 if(contact){
-contact.addEventListener('submit', function(a){
-a.preventDefault();
-checkContInput([fullName, email1, msg]);
+  contact.addEventListener('submit', function(a){
+  a.preventDefault();
+  checkContInput([fullName, email1, msg]);
+  const rightData = document.querySelectorAll('.success');
+  saveData([...rightData]);
 });
 
 //msg length UI
