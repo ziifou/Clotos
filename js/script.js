@@ -96,11 +96,14 @@ function checkRegInput(inputarr){
 //event Listener for register
 if(form){
   form.addEventListener('submit', function(e){
-    e.preventDefault();
     checkRegInput([username, email, password, confirmPass]);
     const rightData = document.querySelectorAll('.success');
     saveData([...rightData]);
     populateUI([username, email, password, confirmPass]);
+    if(rightData.length != 4) {
+      e.preventDefault();
+      console.log('false');
+    }
   });
 }
 
@@ -124,13 +127,19 @@ function checkContInput(inputarr){
   checkEmail(inputarr[1]);
   checkMsg(inputarr[2]);
 }
+//check for acceptable data
+function accept(input){
+
+}
 //event Listener for contact
 if(contact){
   contact.addEventListener('submit', function(a){
-  a.preventDefault();
-  checkContInput([fullName, email1, msg]);
-  const rightData = document.querySelectorAll('.success');
-  saveData([...rightData]);
+    checkContInput([fullName, email1, msg]);
+    const rightData = document.querySelectorAll('.success');
+    saveData([...rightData]);
+    if(rightData.length != 3) {
+      a.preventDefault();
+    }
 });
 
 //msg length UI

@@ -1,0 +1,17 @@
+CREATE DATABASE clotos;
+
+CREATE TABLE CONTACT (
+  id int Not NULL AUTO_INCREMENT,
+  full_name varchar(30) NOT NULL,
+  email varchar(100) NOT NULL,
+  message_text varchar(120) NOT NULL,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE USERS (
+  id int NOT NULL AUTO_INCREMENT,
+  user_name varchar(12) NOT NULL,
+  email varchar(100) NOT NULL,
+  password varchar(12) NOT NULL,
+  PRIMARY KEY(id)
+);
